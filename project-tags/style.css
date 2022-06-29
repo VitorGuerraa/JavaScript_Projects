@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
+    /*Colors*/
     --primaryColor: #ee82ee;
+    --secondColor: #f5a7f5;
     --blackColor: #191919;
     --whiteColor: #fff;
+    --silverColor: #d9d9d9;
 
-    /**Border Raius*/
+    /*Border*/
     --radius10: .625rem;
+    --radius5: .312rem;
+
+    --borderStyle-Primary: 1px solid var(--primaryColor);
 }
 
 * {
@@ -32,7 +38,7 @@ body {
     padding: 18px 25px 20px;
 }
 
-.wrapper .title {
+.wrapper :where(.title, li, li i, .details) {
     display: flex;
     align-items: center;
 }
@@ -47,10 +53,63 @@ body {
     margin-left: 8px;
 }
 
-.wrapper .content{
+.wrapper .content {
     margin: 10px 0;
 }
 
-.content p{
+.content p {
     font-size: 15px;
+}
+
+.content ul {
+    display: flex;
+    padding: 7px;
+    border: var(--borderStyle-Primary);
+    border-radius: var(--radius10);
+}
+
+.content ul li {
+    list-style: none;
+    background: var(--secondColor);
+    padding: 5px 8px 5px 10px;
+    margin: 4px 3px;
+    border: var(--borderStyle-Primary);
+    border-radius: var(--radius5);
+}
+
+.content ul li i {
+    height: 20px;
+    width: 20px;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 3px 5px;
+    justify-content: center;
+
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.content ul input {
+    flex: 1;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+}
+
+.wrapper .details {
+    justify-content: space-between;
+}
+
+.details button{
+    border: none;
+    outline: none;
+    color: var(--whiteColor);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 9px 15px ;
+    border-radius: var(--radius5);
+    background: var(--primaryColor);
 }
