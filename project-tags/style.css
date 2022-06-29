@@ -3,6 +3,10 @@
 :root {
     --primaryColor: #ee82ee;
     --blackColor: #191919;
+    --whiteColor: #fff;
+
+    /**Border Raius*/
+    --radius10: .625rem;
 }
 
 * {
@@ -19,4 +23,34 @@ body {
     justify-content: center;
     min-height: 100vh;
     background-color: var(--primaryColor);
+}
+
+.wrapper {
+    width: 30.625rem;
+    background-color: var(--whiteColor);
+    border-radius: var(--radius10);
+    padding: 18px 25px 20px;
+}
+
+.wrapper .title {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .title img {
+    max-width: 21px;
+}
+
+.wrapper .title h2 {
+    font-size: 21px;
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.wrapper .content{
+    margin: 10px 0;
+}
+
+.content p{
+    font-size: 15px;
 }
